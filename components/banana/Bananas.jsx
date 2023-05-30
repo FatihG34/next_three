@@ -1,13 +1,15 @@
 "use client"
-import React from 'react';
+import React from 'react'
+import * as THREE from 'three'
+import { Canvas } from '@react-three/fiber';
 import { EffectComposer, DepthOfField } from '@react-three/postprocessing'
 import { Environment } from '@react-three/drei'
-import { Canvas } from '@react-three/fiber';
 import Banana from './Banana';
 
-const Bananas = ({ speed = 3, count = 80, depth = 80, easing = (x) => Math.sqrt(1 - Math.pow(x - 1, 2)) }) => {
+const Bananas = ({ speed = 3, count = 100, depth = 80, easing = (x) => Math.sqrt(1 - Math.pow(x - 1, 2)) }) => {
     return (
         // No need for antialias (faster), dpr clamps the resolution to 1.5 (also faster than full resolution)
+
         <Canvas gl={{ antialias: false }} dpr={[1, 1.5]} camera={{ position: [0, 0, 10], fov: 20, near: 0.01, far: depth + 15 }}>
             <color attach="background" args={['#ffbf40']} />
             <spotLight position={[10, 20, 10]} penumbra={1} intensity={3} color="orange" />
