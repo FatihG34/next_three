@@ -1,5 +1,4 @@
-import Bananas from '@/components/Bananas';
-import Image from 'next/image';
+import Bananas from '@/components/banana/Bananas';
 import { Suspense } from 'react';
 
 

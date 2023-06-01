@@ -15,8 +15,8 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <header className='text-center h-10 mb-8'>
           <nav className='flex justify-evenly items-center p-4'>
-            <Link href={'/'} className='p-2 bg-slate-500 rounded-md text-white'>Main Page</Link>
-            <Link href={'/second'} className='p-2 bg-slate-500 rounded-md text-white'>Second Page</Link>
+            <Link href={'/'} className='p-2 bg-slate-500 rounded-md text-white'>First Example</Link>
+            <Link href={'/second'} className='p-2 bg-slate-500 rounded-md text-white'>Second Example</Link>
             <Link href={'/third'} className='p-2 bg-slate-500 rounded-md text-white'>Mix Example</Link>
           </nav>
         </header>
